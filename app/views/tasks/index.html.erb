@@ -1,0 +1,10 @@
+<div class="NewTaskLink"><%= link_to "New Task", new_task_path, id: "new_link", remote: true %></div>
+<div class="CancelNewTaskLink"><%= link_to "Cancel", '#', id: "new_link_cancel", style: "display:none" %></div>
+<div class="Finished"><%= link_to "show finished", root_path(:test => 3), remote: true %></div>
+
+<div id='task-form' style="display:none;"></div>
+<div id="tasks_list">
+  <% @tasks.each do |task| %>
+  <%= render task %>
+  <% end %>
+</div>

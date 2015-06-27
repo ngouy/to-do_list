@@ -1,0 +1,7 @@
+$('#new_task').slideUp(350);
+$('#new_link').slideDown(350);
+$('#new_link_cancel').slideUp(350);
+$('#tasks_list').append( '<%= j render(@task) %>');
+$('edited_task_<%= @task.id %>').css("display","none");
+$('edited_task_<%= @task.id %>').slideDown(350);
+$('#edited_task_<%= @task.id %>').css("background-color", "red");

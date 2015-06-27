@@ -1,0 +1,7 @@
+<div id="edited_task_<%= task.id %>" class="all_task" style="background-color:<% if task.status%>blue<% else %>red<% end %>;">
+    <p><%= task.content %></p>
+    <h1><%= task.status %></h1>
+    <%= link_to "Trash", task, remote: true, method: :delete, data: { confirm: "Sure ?" } %>
+    <%= link_to "Test1", task_test_path(task), remote: true, method: :put %>
+
+</div>

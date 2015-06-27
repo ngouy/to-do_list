@@ -1,0 +1,10 @@
+<% if @ind == 2 %>
+    <% @tasks.each do |t| %>
+        <% if t.status %>
+                if  ($('#edited_task_<%= t.id %>').css('display') == 'none')
+                    $('#edited_task_<%= t.id %>').slideDown(350);
+                else
+                    $('#edited_task_<%= t.id %>').slideUp(350);
+        <%end%>
+    <%end%>
+<%end%>
